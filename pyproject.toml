@@ -1,0 +1,27 @@
+[project]
+name = "shopping-list"
+version = "0.1.0"
+description = "Backend Application for managing shopping lists"
+authors = [
+    {name = "Aminata Tengbe",email = "a.l.tengbe@proton.me"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "sqlmodel (>=0.0.31,<0.0.32)",
+    "fastapi[standard] (>=0.128.0,<0.129.0)",
+    "pydantic-settings (>=2.12.0,<3.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)"
+]
+
+[tool.poetry]
+packages = [{ include = "app" }]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
